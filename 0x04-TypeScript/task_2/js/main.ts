@@ -59,11 +59,11 @@ console.log(createEmployee(200));   // Teacher
 console.log(createEmployee(1000));  // Director
 console.log(createEmployee("$500")); // Director
 
-function isDirector(employee: Director | Teacher): employee is Director {
+export function isDirector(employee: Director | Teacher): employee is Director {
   return employee instanceof Director;
 }
 
-function executeWork(employee: Director | Teacher): string {
+export function executeWork(employee: Director | Teacher): string {
   if (isDirector(employee)) {
     return employee.workDirectorTasks();
   } else {
